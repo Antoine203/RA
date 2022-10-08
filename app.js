@@ -19,9 +19,21 @@ app.get("/", function(req, res){
   res.render("home");
 })
 
-app.get("/login", function(req, res){
-  res.render("login");
-})
+app.route("/login")
+  .get(function(req, res){
+    res.render("login");
+  })
+  .post(function(req, res) {
+
+  })
+
+app.route("/signup")
+  .get(function(req, res){
+    res.render("signup");
+  })
+  .post(function(req, res) {
+
+  })
 
 
 app.listen(3000, function() {
