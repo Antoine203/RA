@@ -1,4 +1,6 @@
 require("dotenv").config();
+// import * as mdb from 'mdb-ui-kit'; // lib
+// import { Input } from 'mdb-ui-kit'; // module
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -12,6 +14,14 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+app.get("/", function(req, res){
+  res.render("home");
+})
+
+app.get("/login", function(req, res){
+  res.render("login");
+})
 
 
 app.listen(3000, function() {
