@@ -1,6 +1,5 @@
 /* ------------------------ Start of Navigation Bar Designs ---------------------- */
 .menu {
-  /* border-color: white; */
   background-color: white;
 }
 .menu:hover {
@@ -8,7 +7,7 @@
 }
 .navbar-color {
   background-color: black;
-  opacity: 90%;
+  /* opacity: 95%; */
 }
 .navbar-text {
   color: gold;
@@ -49,7 +48,6 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #0D1821;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -58,7 +56,6 @@
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -69,99 +66,10 @@
 
 /* ------------------------  End of Navigation Bar Designs ------------------------ */
 
-/* ------------------------ Start of About Section - Home -------------------------- */
-.aboutHome-img {
-  width: 100%;
-  height: 100%;
-}
-.aboutHome-text {
-  text-align: center;
-  color: #fff;
-}
-.aboutHome-button {
-  margin-left: 35%;
-  margin-top: 10px;
-}
-.aboutHome-container {
-  width: 100%;
-  height: 400px;
-  background-color: black;
-  /* position: absolute; */
-}
-
-.aboutHome-innerContainer {
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  /* left: 10%; */
-}
-/* @media only screen and (max-width: 1435px) {
-  .aboutHome-innerContainer {
-    background-color: #fff;
-    width: 30%;
-    height: 200px;
-    position: absolute;
-    bottom: 100px;
-    left: 2.5%;
-  }
-}
-@media only screen and (max-width: 1145px) {
-  .aboutHome-innerContainer {
-    background-color: #fff;
-    width: 35%;
-    height: 200px;
-    position: absolute;
-    bottom: 100px;
-    left: 2.5%;
-  }
-}
-@media only screen and (max-width: 890px) {
-  .aboutHome-innerContainer {
-    background-color: #fff;
-    width: 40%;
-    height: 200px;
-    position: absolute;
-    bottom: 100px;
-    left: 2.5%;
-  }
-}
-@media only screen and (max-width: 730px) {
-  .aboutHome-innerContainer {
-    background-color: #fff;
-    width: 50%;
-    height: 200px;
-    position: absolute;
-    bottom: 100px;
-    left: 2.5%;
-  }
-}
-@media only screen and (max-width: 530px) {
-  .aboutHome-innerContainer {
-    background-color: #fff;
-    width: 60%;
-    height: 200px;
-    position: absolute;
-    bottom: 100px;
-    left: 2.5%;
-  }
-} */
-
-
-/* ------------------------ End of About Section - Home ---------------------------- */
-
-/* ------------------------ Start of creditCardInquiry Section - Home ---------------------------- */
-.creditCardInquiry-container {
-  background-color: black;
-  height: 100px;
-}
-
-/* ------------------------ End of creditCardInquiry Section - Home ---------------------------- */
-
-
 .login, .signup {
   background-color: #dfe4ea;
 }
 .footer {
   text-align: center;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }

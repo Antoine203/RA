@@ -22,29 +22,29 @@
             ">
           <div class="card-body p-5 shadow-5 text-center">
             <h2 class="fw-bold mb-5">Sign up now</h2>
-            <form>
+            <form action="/register" method="POST">
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" autocomplete="off" placeholder="First Name"/>
+                    <input type="text" id="form3Example1" class="form-control" autocomplete="off" placeholder="First Name" name="fname"/>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" autocomplete="off" placeholder="Last Name"/>
+                    <input type="text" id="form3Example2" class="form-control" autocomplete="off" placeholder="Last Name" name="lname"/>
                   </div>
                 </div>
               </div>
 
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" autocomplete="off" placeholder="Email Address" value=""/>
+                <input type="email" id="form3Example3" class="form-control" autocomplete="off" placeholder="Email Address" value="" name="username"/>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" autocomplete="off" placeholder="Password" value=""/>
+                <input type="password" id="form3Example4" class="form-control" autocomplete="off" placeholder="Password" value="" name="password"/>
               </div>
 
 
