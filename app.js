@@ -102,6 +102,10 @@ app.route("/register")
     })
   });
 
+app.route("/forgot-password")
+  .get(function(req, res) {
+    res.render("forgotPassword");
+  })
 
 app.listen(port, function() {
   console.log("Server started on port", port)

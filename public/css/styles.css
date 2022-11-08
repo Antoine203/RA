@@ -66,8 +66,31 @@
 
 /* ------------------------  End of Navigation Bar Designs ------------------------ */
 
-.login, .signup {
+.login, .register {
   background-color: #dfe4ea;
+}
+.login-links {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: black;
+}
+.login-links:hover{
+  color:gold;
+}
+.login-button, .register-button {
+  color: gold;
+}
+.login-button:hover, .register-button:hover{
+  color:gold;
+}
+.resetPwBtn {
+  color: gold;
+}
+@media only screen and (max-width: 1199px) {
+  .login-links{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .footer {
   text-align: center;
