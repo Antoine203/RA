@@ -77,106 +77,41 @@
 
 /* ------------------------ End of Intro Section - Home ---------------------------- */
 
-/* ------------------------ Start of creditCardInquiry Section - Home ---------------------------- */
-.creditCardInquiry-container {
-  background-color: black;
-  width: 100%;
-  height: 300px;
+/* ------------------------ Start of Deposit Section - Home ---------------------------- */
+
+.depositHome-container {
+  background-color: white;
+  height: 400px;
 }
 
-.creditCardInquiry-innerContainer {
-  padding: 2% 2%;
-  height: 100%;
-  width: 100%;
-}
-.card {
-  height: 100%;
-  width: 100%;
-  /* border-style: hidden; */
-}
-.visualContents {
-  width: 50%;
-  height: 100%;
+.depositHome-image {
+  padding-top: 5%;
+  padding-left: 18%;
 }
 
-/* ------------------------ End of creditCardInquiry Section - Home ---------------------------- */
-
-/* ------------------------ Start of creditScore Section - Home -------------------------------- */
-.creditScore-Container {
-  width: 100%;
-  height: 300px;
-}
-.creditScore-innerContainer, .row {
-  width: 100%;
-  height: 100%;
-}
-.creditScore-cardBody-color {
-  background-color: black;
-  /* opacity: 90%; */
-}
-.creditScore-card {
-  border-style: none;
-}
-.creditScore-textBody {
-  color: white;
-  padding: 10%;
-  position: absolute;
-  z-index: 1;
-}
-.creditScore-innerCol {
+.depositHome-text {
   padding-top: 10%;
-  padding-left: 35%;
+  padding-left: 18%;
 }
-@media only screen and (max-width: 991px){
-  .creditScore-Container {
-    height: 600px;
-  }
-  .creditScore-textBody {
-    padding-left: 25.5%;
-  }
-  .creditScore-innerCol {
-    padding-top: 20%;
-    padding-left: 37.5%;
-  }
+
+
+/* ------------------------ End of Deposit Section - Home ---------------------------- */
+
+/* ------------------------ Start of Withdrawal Section - Home --------------------------- */
+
+.withdrawalHome-container {
+  background-color: black;
+  height: 400px;
 }
-@media only screen and (max-width: 970px){
-  .creditScore-textBody {
-    padding-left: 25.5%;
-  }
-  .creditScore-innerCol {
-    padding-left: 37.5%;
-  }
+
+.withdrawalHome-text {
+  padding-top: 10%;
+  padding-left: 18%;
 }
-@media only screen and (max-width: 885px){
-  .creditScore-textBody {
-    padding-left: 23.5%;
-  }
-  .creditScore-innerCol {
-    padding-left: 35.5%;
-  }
+
+.withdrawalHome-image {
+  padding-top: 5%;
+  padding-left: 18%;
 }
-@media only screen and (max-width: 800px){
-  .creditScore-textBody {
-    padding-left: 21.5%;
-  }
-  .creditScore-innerCol {
-    padding-left: 35.5%;
-  }
-}
-@media only screen and (max-width: 760px){
-  .creditScore-textBody {
-    padding-left: 18.5%;
-  }
-  .creditScore-innerCol {
-    padding-left: 32.5%;
-  }
-}
-@media only screen and (max-width: 550px){
-  .creditScore-textBody {
-    padding-left: 16.5%;
-  }
-  .creditScore-innerCol {
-    padding-left: 29.5%;
-  }
-}
-/* ------------------------ End of creditScore Section - Home -------------------------------- */
+
+/* ------------------------- End of Withdrawal Section - Home */

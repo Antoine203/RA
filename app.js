@@ -2,6 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const jwt = require("jsonwebtoken");
+const mailgun = require("mailgun-js");
+// const DOMAIN =
+// const mg = mailgun({apiKey: process.env.MAILGUN_APIKEY, domain: DOMAIN});
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -16,7 +20,8 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-// app.set("trust proxy", 1)
+
+
 app.use(session({
   secret: process.env.SESSION_COOKIESECRET,
   name: process.env.SESSION_COOKIENAME,
@@ -24,16 +29,29 @@ app.use(session({
   saveUninitialized: false
 }));
 
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb://localhost:27017/raDB', {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_API, {useNewUrlParser: true})
 
 const userSchema = new mongoose.Schema({
   first_name: String,
   last_name: String,
-  email: String,
+  email: {
+    type: String,
+    unique: true
+  } ,
   password: String
+})
+
+const bankAccountSchema = new mongoose.Schema({
+  balance: Number,
+  route_number: Number,
+  account_number: {
+    type: Number,
+    unique: true
+  }
 })
 
 userSchema.plugin(passportLocalMongoose);
@@ -54,8 +72,13 @@ passport.deserializeUser(function(user, done) {
 app.get("/", function(req, res){
   res.render("home");
 })
+
 app.get("/profile", function(req, res){
-  res.render("profile");
+  if (req.user) {
+    res.render("profile");
+  } else {
+    res.redirect("/login");
+  }
 })
 
 
@@ -84,10 +107,10 @@ app.route("/register")
     res.render("register");
   })
   .post(function(req, res) {
-    User.register({first_name: req.body.fname, 
-                  last_name: req.body.lname, 
+    User.register({first_name: req.body.fname,
+                  last_name: req.body.lname,
                   username: req.body.username},
-                  req.body.password, 
+                  req.body.password,
                   function(err, user) {
       if (err) {
         console.log(err);
@@ -106,6 +129,9 @@ app.route("/forgot-password")
   .get(function(req, res) {
     res.render("forgotPassword");
   })
+
+
+
 
 app.listen(port, function() {
   console.log("Server started on port", port)
